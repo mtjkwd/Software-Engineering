@@ -62,7 +62,8 @@ namespace SoftEng
             while (sqlReader.Read())
             {
                 MonsterInfo temp;
-                temp.monsterName = (sqlReader.GetString("Health"));
+                temp.monsterName = (sqlReader.GetString("Name"));
+                temp.monsterHealth = sqlReader.GetString("Health");
                 temp.challengeRating = sqlReader.GetInt32("Challenge Rating");
                 temp.monsterHealth = sqlReader.GetString("Health");
                 temp.monsterSize = sqlReader.GetString("Size Class");

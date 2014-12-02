@@ -21,7 +21,9 @@ namespace SoftEng
         {
             //this.Close();
             Form Monsters = new MonsterSelect();
-            Monsters.Show();
+            Control[] BAB = Monsters.Controls.Find("MonsterSelect_BABText", true);
+            Control[] InitMod = Monsters.Controls.Find("MonsterSelect_InitModText", true);
+
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -39,17 +41,6 @@ namespace SoftEng
             }
         }
 
-        private void checkedListBox1_Click(object sender, EventArgs e)
-        {
-            // Test click code for the box, see if the data source works //
-            MYSQLConn test = new MYSQLConn();
-            List<MonsterInfo> testList = test.getMonsterData();
-            foreach (MonsterInfo testListItem in testList)
-            {
-                checkedListBox1.Items.Add(testListItem.monsterType);
-            }
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             // Gets the monster's picture -- TEST CODE MJ 12.1.14 //
@@ -59,7 +50,19 @@ namespace SoftEng
             //{
             //    pictureBox1.Image = testListItem.image;
             //}
-            pictureBox1.Image = System.Drawing.Image.FromFile("./IMG_1110.JPG");
+            //pictureBox1.Image = System.Drawing.Image.FromFile("./IMG_1110.JPG");
+        }
+
+        private void Button_populateMonsters_Click(object sender, EventArgs e)
+        {
+            // For populating monster name dropdown checkbox list //
+            // Test click code for the box, see if the data source works //
+            MYSQLConn test = new MYSQLConn();
+            List<MonsterInfo> testList = test.getMonsterData();
+            foreach (MonsterInfo testListItem in testList)
+            {
+                checkedListBox1.Items.Add(testListItem.monsterName);
+            }
         }
 
         
