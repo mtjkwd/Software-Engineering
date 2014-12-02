@@ -1,7 +1,9 @@
 ﻿using System;
+using System.Drawing;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.IO;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 
@@ -27,6 +29,16 @@ namespace SoftEng
         public string monsterHealth;
         public string monsterSize;
         public string monsterType;
+    }
+    struct MonsterAttributes
+    {
+        public string monsterName;
+        public string BAB;
+        public string InitMod;
+        public string DamageDice;
+        public int NumHD;
+        public string HealthDice;
+        // put the picture here somehow...
     }
     class MYSQLConn
     {
@@ -59,6 +71,31 @@ namespace SoftEng
             }
             sqlReader.Close();
             return MonsterList;
+        }
+        public List<MonsterAttributes> getMonsterAttributes(string monsterName)
+        {
+            List<MonsterAttributes> attributes = new List<MonsterAttributes>();
+            string cmdText = "SELECT * FROM Software_Engineering.MonsterAttr"
+                + " WHERE Name = " + "'" + monsterName.ToString() + "'";
+            MySqlCommand cmd = new MySqlCommand(cmdText, sqlConn);
+            sqlReader = cmd.ExecuteReader(); // executes the reader
+            while (sqlReader.Read())
+            {
+                MonsterAttributes temp;
+                temp.monsterName = monsterName;
+                temp.BAB = sqlReader.GetString("BAB");
+                temp.InitMod = sqlReader.GetInt32("InitMod").ToString();
+                temp.DamageDice = sqlReader.GetString("DamageDice");
+                temp.NumHD = sqlReader.GetInt32("NumHD");
+                temp.HealthDice = sqlReader.GetString("HealthDice");
+                
+                // Test code for pictures //
+                
+
+                attributes.Add(temp);
+            }
+            sqlReader.Close();
+            return attributes;
         }
 
     }

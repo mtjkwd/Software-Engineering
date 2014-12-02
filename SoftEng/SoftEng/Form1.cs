@@ -50,6 +50,18 @@ namespace SoftEng
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // Gets the monster's picture -- TEST CODE MJ 12.1.14 //
+            //MYSQLConn test = new MYSQLConn();
+            //List<MonsterAttributes> testList = test.getMonsterAttributes("Assassin Vine");
+            //foreach (MonsterAttributes testListItem in testList)
+            //{
+            //    pictureBox1.Image = testListItem.image;
+            //}
+            pictureBox1.Image = System.Drawing.Image.FromFile("./IMG_1110.JPG");
+        }
+
         
     }
 }
