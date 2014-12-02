@@ -10,21 +10,14 @@ using System.Windows.Forms;
 
 namespace SoftEng
 {
-    public partial class Form1 : Form
+    public partial class MonsterSelect : Form
     {
-        public Form1()
+        public MonsterSelect()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            //this.Close();
-            Form Monsters = new MonsterSelect();
-            Monsters.Show();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
             this.Close();
         }
