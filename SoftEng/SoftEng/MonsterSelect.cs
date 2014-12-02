@@ -27,5 +27,10 @@ namespace SoftEng
 
         }
 
+        private void MonsterSelect_Cancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
     }
 }

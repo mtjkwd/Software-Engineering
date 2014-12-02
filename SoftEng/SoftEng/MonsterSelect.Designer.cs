@@ -62,6 +62,7 @@
             this.MonsterSelect_Cancel.TabIndex = 1;
             this.MonsterSelect_Cancel.Text = "Cancel";
             this.MonsterSelect_Cancel.UseVisualStyleBackColor = true;
+            this.MonsterSelect_Cancel.Click += new System.EventHandler(this.MonsterSelect_Cancel_Click);
             // 
             // label1
             // 
@@ -122,6 +123,7 @@
             // 
             this.MonsterSelect_BABText.Location = new System.Drawing.Point(230, 47);
             this.MonsterSelect_BABText.Name = "MonsterSelect_BABText";
+            this.MonsterSelect_BABText.ReadOnly = true;
             this.MonsterSelect_BABText.Size = new System.Drawing.Size(100, 20);
             this.MonsterSelect_BABText.TabIndex = 8;
             // 
@@ -129,6 +131,7 @@
             // 
             this.MonsterSelect_InitModText.Location = new System.Drawing.Point(230, 86);
             this.MonsterSelect_InitModText.Name = "MonsterSelect_InitModText";
+            this.MonsterSelect_InitModText.ReadOnly = true;
             this.MonsterSelect_InitModText.Size = new System.Drawing.Size(100, 20);
             this.MonsterSelect_InitModText.TabIndex = 9;
             // 
@@ -136,6 +139,7 @@
             // 
             this.MonsterSelect_DamageDiceText.Location = new System.Drawing.Point(230, 117);
             this.MonsterSelect_DamageDiceText.Name = "MonsterSelect_DamageDiceText";
+            this.MonsterSelect_DamageDiceText.ReadOnly = true;
             this.MonsterSelect_DamageDiceText.Size = new System.Drawing.Size(100, 20);
             this.MonsterSelect_DamageDiceText.TabIndex = 10;
             // 
@@ -143,6 +147,7 @@
             // 
             this.MonsterSelect_NumHDText.Location = new System.Drawing.Point(230, 154);
             this.MonsterSelect_NumHDText.Name = "MonsterSelect_NumHDText";
+            this.MonsterSelect_NumHDText.ReadOnly = true;
             this.MonsterSelect_NumHDText.Size = new System.Drawing.Size(100, 20);
             this.MonsterSelect_NumHDText.TabIndex = 11;
             // 
@@ -150,6 +155,7 @@
             // 
             this.MonsterSelect_HealthDiceText.Location = new System.Drawing.Point(230, 194);
             this.MonsterSelect_HealthDiceText.Name = "MonsterSelect_HealthDiceText";
+            this.MonsterSelect_HealthDiceText.ReadOnly = true;
             this.MonsterSelect_HealthDiceText.Size = new System.Drawing.Size(100, 20);
             this.MonsterSelect_HealthDiceText.TabIndex = 12;
             // 
@@ -166,6 +172,7 @@
             // 
             this.MonsterSelect_NameText.Location = new System.Drawing.Point(230, 12);
             this.MonsterSelect_NameText.Name = "MonsterSelect_NameText";
+            this.MonsterSelect_NameText.ReadOnly = true;
             this.MonsterSelect_NameText.Size = new System.Drawing.Size(100, 20);
             this.MonsterSelect_NameText.TabIndex = 14;
             // 
