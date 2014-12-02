@@ -21,8 +21,32 @@ namespace SoftEng
         {
             //this.Close();
             Form Monsters = new MonsterSelect();
+            Control[] Name = Monsters.Controls.Find("MonsterSelect_NameText", true);
             Control[] BAB = Monsters.Controls.Find("MonsterSelect_BABText", true);
             Control[] InitMod = Monsters.Controls.Find("MonsterSelect_InitModText", true);
+            Control[] DamageDice = Monsters.Controls.Find("MonsterSelect_DamageDiceText", true);
+            Control[] NumHD = Monsters.Controls.Find("MonsterSelect_NumHDText", true);
+            Control[] HealthDice = Monsters.Controls.Find("MonsterSelect_HealthDiceText", true);
+
+            TextBox NameText = (TextBox)Name[0];
+            TextBox BABText = (TextBox)BAB[0];
+            TextBox InitModText = (TextBox)InitMod[0];
+            TextBox DamageDiceText = (TextBox)DamageDice[0];
+            TextBox NumHDText = (TextBox)NumHD[0];
+            TextBox HealthDiceText = (TextBox)HealthDice[0];
+
+            // Test code for one monster, in future get value from check boxes control in form1 //
+            MYSQLConn sqlConnection = new MYSQLConn();
+            List<MonsterAttributes> attributes = sqlConnection.getMonsterAttributes("Barghest");
+
+            NameText.Text = attributes[0].monsterName.ToString();
+            BABText.Text = attributes[0].BAB.ToString();
+            InitModText.Text = attributes[0].InitMod.ToString();
+            DamageDiceText.Text = attributes[0].DamageDice.ToString();
+            NumHDText.Text = attributes[0].NumHD.ToString();
+            HealthDiceText.Text = attributes[0].HealthDice.ToString();
+
+            Monsters.Show();
 
         }
 

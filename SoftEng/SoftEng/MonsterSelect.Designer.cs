@@ -41,6 +41,8 @@
             this.MonsterSelect_DamageDiceText = new System.Windows.Forms.TextBox();
             this.MonsterSelect_NumHDText = new System.Windows.Forms.TextBox();
             this.MonsterSelect_HealthDiceText = new System.Windows.Forms.TextBox();
+            this.MonsterSelect_Name = new System.Windows.Forms.Label();
+            this.MonsterSelect_NameText = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // MonsterSelect_Select
@@ -151,11 +153,29 @@
             this.MonsterSelect_HealthDiceText.Size = new System.Drawing.Size(100, 20);
             this.MonsterSelect_HealthDiceText.TabIndex = 12;
             // 
+            // MonsterSelect_Name
+            // 
+            this.MonsterSelect_Name.AutoSize = true;
+            this.MonsterSelect_Name.Location = new System.Drawing.Point(135, 12);
+            this.MonsterSelect_Name.Name = "MonsterSelect_Name";
+            this.MonsterSelect_Name.Size = new System.Drawing.Size(76, 13);
+            this.MonsterSelect_Name.TabIndex = 13;
+            this.MonsterSelect_Name.Text = "Monster Name";
+            // 
+            // MonsterSelect_NameText
+            // 
+            this.MonsterSelect_NameText.Location = new System.Drawing.Point(230, 12);
+            this.MonsterSelect_NameText.Name = "MonsterSelect_NameText";
+            this.MonsterSelect_NameText.Size = new System.Drawing.Size(100, 20);
+            this.MonsterSelect_NameText.TabIndex = 14;
+            // 
             // MonsterSelect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(513, 274);
+            this.Controls.Add(this.MonsterSelect_NameText);
+            this.Controls.Add(this.MonsterSelect_Name);
             this.Controls.Add(this.MonsterSelect_HealthDiceText);
             this.Controls.Add(this.MonsterSelect_NumHDText);
             this.Controls.Add(this.MonsterSelect_DamageDiceText);
@@ -171,6 +191,7 @@
             this.Controls.Add(this.MonsterSelect_Select);
             this.Name = "MonsterSelect";
             this.Text = "MonsterSelect";
+            this.TopMost = true;
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -191,6 +212,8 @@
         private System.Windows.Forms.TextBox MonsterSelect_DamageDiceText;
         private System.Windows.Forms.TextBox MonsterSelect_NumHDText;
         private System.Windows.Forms.TextBox MonsterSelect_HealthDiceText;
+        private System.Windows.Forms.Label MonsterSelect_Name;
+        private System.Windows.Forms.TextBox MonsterSelect_NameText;
 
     }
 }
