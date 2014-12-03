@@ -15,6 +15,13 @@ namespace SoftEng
         public MonsterGen()
         {
             InitializeComponent();
+
+            MYSQLConn test = new MYSQLConn();
+            List<MonsterInfo> testList = test.getMonsterData();
+            foreach (MonsterInfo testListItem in testList)
+            {
+                monsterList.Items.Add(testListItem.monsterName);
+            }
         }
 
         private void btn_viewSelectedMonster_Click(object sender, EventArgs e)
@@ -86,12 +93,7 @@ namespace SoftEng
 
         private void Button_genMonster_Click(object sender, EventArgs e)
         {
-            MYSQLConn test = new MYSQLConn();
-            List<MonsterInfo> testList = test.getMonsterData();
-            foreach (MonsterInfo testListItem in testList)
-            {
-                monsterList.Items.Add(testListItem.monsterName);
-            }
+
         }
 
         
