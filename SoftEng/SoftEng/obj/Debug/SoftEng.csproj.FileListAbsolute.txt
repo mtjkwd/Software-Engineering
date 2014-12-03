@@ -9,3 +9,13 @@ C:\Users\Michael\Documents\Software-Engineering\SoftEng\SoftEng\obj\Debug\SoftEn
 C:\Users\Michael\Documents\Software-Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.exe
 C:\Users\Michael\Documents\Software-Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.pdb
 C:\Users\Michael\Documents\Software-Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.MonsterSelect.resources
+C:\Users\Michael\Documents\GitHub\Software-Engineering\SoftEng\SoftEng\bin\Debug\SoftEng.exe.config
+C:\Users\Michael\Documents\GitHub\Software-Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.exe
+C:\Users\Michael\Documents\GitHub\Software-Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.pdb
+C:\Users\Michael\Documents\GitHub\Software-Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.csprojResolveAssemblyReference.cache
+C:\Users\Michael\Documents\GitHub\Software-Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.MonsterSelect.resources
+C:\Users\Michael\Documents\GitHub\Software-Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.Properties.Resources.resources
+C:\Users\Michael\Documents\GitHub\Software-Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.csproj.GenerateResource.Cache
+C:\Users\Michael\Documents\GitHub\Software-Engineering\SoftEng\SoftEng\bin\Debug\SoftEng.exe
+C:\Users\Michael\Documents\GitHub\Software-Engineering\SoftEng\SoftEng\bin\Debug\SoftEng.pdb
+C:\Users\Michael\Documents\GitHub\Software-Engineering\SoftEng\SoftEng\obj\Debug\SoftEng.MonsterGen.resources

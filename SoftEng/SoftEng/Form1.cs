@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace SoftEng
 {
-    public partial class Form1 : Form
+    public partial class MonsterGen : Form
     {
-        public Form1()
+        public MonsterGen()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btn_viewSelectedMonster_Click(object sender, EventArgs e)
         {
             //this.Close();
             Form Monsters = new MonsterSelect();
@@ -77,15 +77,13 @@ namespace SoftEng
             //pictureBox1.Image = System.Drawing.Image.FromFile("./IMG_1110.JPG");
         }
 
-        private void Button_populateMonsters_Click(object sender, EventArgs e)
+        private void Button_genMonster_Click(object sender, EventArgs e)
         {
-            // For populating monster name dropdown checkbox list //
-            // Test click code for the box, see if the data source works //
             MYSQLConn test = new MYSQLConn();
             List<MonsterInfo> testList = test.getMonsterData();
             foreach (MonsterInfo testListItem in testList)
             {
-                checkedListBox1.Items.Add(testListItem.monsterName);
+                monsterList.Items.Add(testListItem.monsterName);
             }
         }
 
