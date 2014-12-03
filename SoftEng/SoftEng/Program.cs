@@ -123,6 +123,20 @@ namespace SoftEng
             return attributes;
         }
 
+        public int getNumMonsters()
+        {
+            int result = 0;
+            string cmdText = "SELECT COUNT(Name) FROM Software_Engineering.Monster;";
+            MySqlCommand cmd = new MySqlCommand(cmdText, sqlConn);
+            sqlReader = cmd.ExecuteReader(); // executes the reader
+            while (sqlReader.Read())
+            {
+                result = sqlReader.GetInt32(1);
+            }
+            sqlReader.Close();
+            return result;
+        }
+
         public void closeSQL()
         {
             sqlConn.Close();

@@ -29,7 +29,6 @@ namespace SoftEng
             foreach (object currentMonster in monsterList.CheckedItems)
             {
                 makeNewDetailedWindow(monsterList.GetItemText(currentMonster));
-                //MessageBox.Show(monsterList.SelectedItems.Count.ToString());
             }
         }
 
