@@ -73,6 +73,30 @@ namespace SoftEng
             sqlReader.Close();
             return MonsterList;
         }
+
+        public List<MonsterInfo> getMonsterData(string monsterName)
+        {
+
+            string cmdText = "SELECT * FROM Software_Engineering.Monster "
+                + "WHERE Name ='" + monsterName.ToString() + "'";
+            MySqlCommand cmd = new MySqlCommand(cmdText, sqlConn);
+            sqlReader = cmd.ExecuteReader(); // executes the reader
+            List<MonsterInfo> monster = new List<MonsterInfo>();
+            while (sqlReader.Read())
+            {
+                MonsterInfo temp;
+                temp.monsterName = (sqlReader.GetString("Name"));
+                temp.monsterHealth = sqlReader.GetString("Health");
+                temp.challengeRating = sqlReader.GetInt32("Challenge Rating");
+                temp.monsterHealth = sqlReader.GetString("Health");
+                temp.monsterSize = sqlReader.GetString("Size Class");
+                temp.monsterType = sqlReader.GetString("Type");
+                monster.Add(temp);
+            }
+            sqlReader.Close();
+            return monster;
+        }
+
         public List<MonsterAttributes> getMonsterAttributes(string monsterName)
         {
             List<MonsterAttributes> attributes = new List<MonsterAttributes>();
@@ -99,5 +123,9 @@ namespace SoftEng
             return attributes;
         }
 
+        public void closeSQL()
+        {
+            sqlConn.Close();
+        }
     }
 }

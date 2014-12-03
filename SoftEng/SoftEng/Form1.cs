@@ -87,6 +87,21 @@ namespace SoftEng
             }
         }
 
+        private void monsterList_Click(object sender, EventArgs e)
+        {
+            // Populate the 'preview' box with the picture, monster data, etc for the preview //
+            MYSQLConn sql = new MYSQLConn();
+            CheckedListBox CheckBoxList = (CheckedListBox)sender;
+            List<MonsterInfo> selectedMonsters = sql.getMonsterData(CheckBoxList.SelectedItems[0].ToString());
+            MonsterInfo selectedMonster = selectedMonsters[0];
+
+            txtName.Text = selectedMonster.monsterName.ToString();
+            txtChallengeRating.Text = selectedMonster.challengeRating.ToString();
+            txtHealth.Text = selectedMonster.monsterHealth.ToString();
+            txtSize.Text = selectedMonster.monsterSize.ToString();
+            txtType.Text = selectedMonster.monsterType.ToString();
+        }
+
         
     }
 }
