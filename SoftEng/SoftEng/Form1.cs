@@ -19,7 +19,15 @@ namespace SoftEng
 
         private void btn_viewSelectedMonster_Click(object sender, EventArgs e)
         {
-            //this.Close();
+            foreach (object currentMonster in monsterList.CheckedItems)
+            {
+                makeNewDetailedWindow(monsterList.GetItemText(currentMonster));
+                //MessageBox.Show(monsterList.SelectedItems.Count.ToString());
+            }
+        }
+
+        private void makeNewDetailedWindow(string monsterName)
+        {
             Form Monsters = new MonsterSelect();
             Control[] Name = Monsters.Controls.Find("MonsterSelect_NameText", true);
             Control[] BAB = Monsters.Controls.Find("MonsterSelect_BABText", true);
@@ -35,9 +43,9 @@ namespace SoftEng
             TextBox NumHDText = (TextBox)NumHD[0];
             TextBox HealthDiceText = (TextBox)HealthDice[0];
 
-            // Test code for one monster, in future get value from check boxes control in form1 //
+            //Get the info for each monster and load it into a new popup
             MYSQLConn sqlConnection = new MYSQLConn();
-            List<MonsterAttributes> attributes = sqlConnection.getMonsterAttributes("Barghest");
+            List<MonsterAttributes> attributes = sqlConnection.getMonsterAttributes(monsterName);
 
             NameText.Text = attributes[0].monsterName.ToString();
             BABText.Text = attributes[0].BAB.ToString();
@@ -47,7 +55,6 @@ namespace SoftEng
             HealthDiceText.Text = attributes[0].HealthDice.ToString();
 
             Monsters.Show();
-
         }
 
         private void button2_Click(object sender, EventArgs e)
