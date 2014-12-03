@@ -57,7 +57,7 @@
             this.Button_ViewMonster.Name = "Button_ViewMonster";
             this.Button_ViewMonster.Size = new System.Drawing.Size(182, 23);
             this.Button_ViewMonster.TabIndex = 0;
-            this.Button_ViewMonster.Text = "View Selected Monster";
+            this.Button_ViewMonster.Text = "View Selected Monster(s)";
             this.Button_ViewMonster.UseVisualStyleBackColor = true;
             this.Button_ViewMonster.Click += new System.EventHandler(this.btn_viewSelectedMonster_Click);
             // 

@@ -5,3 +5,11 @@
 *.pdb
 *.suo
 *.suo
+*.exe
+SoftEng/SoftEng/bin/Debug/SoftEng.exe
+SoftEng/SoftEng/bin/Debug/SoftEng.pdb
+SoftEng/SoftEng/obj/Debug/SoftEng.csproj.GenerateResource.Cache
+SoftEng/SoftEng/obj/Debug/SoftEng.exe
+SoftEng/SoftEng/obj/Debug/SoftEng.exe
+SoftEng/SoftEng/obj/Debug/SoftEng.pdb
+SoftEng/SoftEng/obj/Debug/SoftEng.csproj.GenerateResource.Cache
