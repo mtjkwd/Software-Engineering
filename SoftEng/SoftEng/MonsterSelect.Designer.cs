@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.MonsterSelect_Select = new System.Windows.Forms.Button();
             this.MonsterSelect_Cancel = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.MonsterSelect_BABLabel = new System.Windows.Forms.Label();
@@ -43,16 +42,8 @@
             this.MonsterSelect_HealthDiceText = new System.Windows.Forms.TextBox();
             this.MonsterSelect_Name = new System.Windows.Forms.Label();
             this.MonsterSelect_NameText = new System.Windows.Forms.TextBox();
+            this.MonsterSelect_Edit = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            // 
-            // MonsterSelect_Select
-            // 
-            this.MonsterSelect_Select.Location = new System.Drawing.Point(25, 26);
-            this.MonsterSelect_Select.Name = "MonsterSelect_Select";
-            this.MonsterSelect_Select.Size = new System.Drawing.Size(75, 23);
-            this.MonsterSelect_Select.TabIndex = 0;
-            this.MonsterSelect_Select.Text = "Select Monster";
-            this.MonsterSelect_Select.UseVisualStyleBackColor = true;
             // 
             // MonsterSelect_Cancel
             // 
@@ -176,11 +167,22 @@
             this.MonsterSelect_NameText.Size = new System.Drawing.Size(100, 20);
             this.MonsterSelect_NameText.TabIndex = 14;
             // 
+            // MonsterSelect_Edit
+            // 
+            this.MonsterSelect_Edit.Location = new System.Drawing.Point(25, 25);
+            this.MonsterSelect_Edit.Name = "MonsterSelect_Edit";
+            this.MonsterSelect_Edit.Size = new System.Drawing.Size(75, 23);
+            this.MonsterSelect_Edit.TabIndex = 15;
+            this.MonsterSelect_Edit.Text = "Edit Monster";
+            this.MonsterSelect_Edit.UseVisualStyleBackColor = true;
+            this.MonsterSelect_Edit.Click += new System.EventHandler(this.MonsterSelect_Edit_Click);
+            // 
             // MonsterSelect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(513, 274);
+            this.Controls.Add(this.MonsterSelect_Edit);
             this.Controls.Add(this.MonsterSelect_NameText);
             this.Controls.Add(this.MonsterSelect_Name);
             this.Controls.Add(this.MonsterSelect_HealthDiceText);
@@ -195,7 +197,6 @@
             this.Controls.Add(this.MonsterSelect_BABLabel);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.MonsterSelect_Cancel);
-            this.Controls.Add(this.MonsterSelect_Select);
             this.Name = "MonsterSelect";
             this.Text = "MonsterSelect";
             this.TopMost = true;
@@ -206,7 +207,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button MonsterSelect_Select;
         private System.Windows.Forms.Button MonsterSelect_Cancel;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label MonsterSelect_BABLabel;
@@ -221,6 +221,7 @@
         private System.Windows.Forms.TextBox MonsterSelect_HealthDiceText;
         private System.Windows.Forms.Label MonsterSelect_Name;
         private System.Windows.Forms.TextBox MonsterSelect_NameText;
+        private System.Windows.Forms.Button MonsterSelect_Edit;
 
     }
 }
