@@ -48,37 +48,37 @@
             // 
             // MonsterSelect_Cancel
             // 
-            this.MonsterSelect_Cancel.Location = new System.Drawing.Point(25, 66);
+            this.MonsterSelect_Cancel.Location = new System.Drawing.Point(138, 229);
             this.MonsterSelect_Cancel.Name = "MonsterSelect_Cancel";
-            this.MonsterSelect_Cancel.Size = new System.Drawing.Size(75, 23);
+            this.MonsterSelect_Cancel.Size = new System.Drawing.Size(117, 23);
             this.MonsterSelect_Cancel.TabIndex = 1;
-            this.MonsterSelect_Cancel.Text = "Cancel";
+            this.MonsterSelect_Cancel.Text = "Close Window";
             this.MonsterSelect_Cancel.UseVisualStyleBackColor = true;
             this.MonsterSelect_Cancel.Click += new System.EventHandler(this.MonsterSelect_Cancel_Click);
             // 
             // MonsterSelect_BABLabel
             // 
             this.MonsterSelect_BABLabel.AutoSize = true;
-            this.MonsterSelect_BABLabel.Location = new System.Drawing.Point(132, 55);
+            this.MonsterSelect_BABLabel.Location = new System.Drawing.Point(12, 47);
             this.MonsterSelect_BABLabel.Name = "MonsterSelect_BABLabel";
-            this.MonsterSelect_BABLabel.Size = new System.Drawing.Size(28, 13);
+            this.MonsterSelect_BABLabel.Size = new System.Drawing.Size(98, 13);
             this.MonsterSelect_BABLabel.TabIndex = 3;
-            this.MonsterSelect_BABLabel.Text = "BAB";
+            this.MonsterSelect_BABLabel.Text = "Base Attack Bonus";
             // 
             // MonsterSelect_InitModLabel
             // 
             this.MonsterSelect_InitModLabel.AutoSize = true;
-            this.MonsterSelect_InitModLabel.Location = new System.Drawing.Point(135, 86);
+            this.MonsterSelect_InitModLabel.Location = new System.Drawing.Point(12, 86);
             this.MonsterSelect_InitModLabel.Name = "MonsterSelect_InitModLabel";
-            this.MonsterSelect_InitModLabel.Size = new System.Drawing.Size(45, 13);
+            this.MonsterSelect_InitModLabel.Size = new System.Drawing.Size(70, 13);
             this.MonsterSelect_InitModLabel.TabIndex = 4;
-            this.MonsterSelect_InitModLabel.Text = "Init Mod";
+            this.MonsterSelect_InitModLabel.Text = "Initiative Mod";
             this.MonsterSelect_InitModLabel.Click += new System.EventHandler(this.label3_Click);
             // 
             // MonsterSelect_DamageDiceLabel
             // 
             this.MonsterSelect_DamageDiceLabel.AutoSize = true;
-            this.MonsterSelect_DamageDiceLabel.Location = new System.Drawing.Point(135, 117);
+            this.MonsterSelect_DamageDiceLabel.Location = new System.Drawing.Point(12, 117);
             this.MonsterSelect_DamageDiceLabel.Name = "MonsterSelect_DamageDiceLabel";
             this.MonsterSelect_DamageDiceLabel.Size = new System.Drawing.Size(72, 13);
             this.MonsterSelect_DamageDiceLabel.TabIndex = 5;
@@ -87,16 +87,16 @@
             // MonsterSelect_NumHDLabel
             // 
             this.MonsterSelect_NumHDLabel.AutoSize = true;
-            this.MonsterSelect_NumHDLabel.Location = new System.Drawing.Point(135, 154);
+            this.MonsterSelect_NumHDLabel.Location = new System.Drawing.Point(12, 154);
             this.MonsterSelect_NumHDLabel.Name = "MonsterSelect_NumHDLabel";
-            this.MonsterSelect_NumHDLabel.Size = new System.Drawing.Size(48, 13);
+            this.MonsterSelect_NumHDLabel.Size = new System.Drawing.Size(97, 13);
             this.MonsterSelect_NumHDLabel.TabIndex = 6;
-            this.MonsterSelect_NumHDLabel.Text = "Num HD";
+            this.MonsterSelect_NumHDLabel.Text = "Number of Hit Dice";
             // 
             // MonsterSelect_HealthDiceLabel
             // 
             this.MonsterSelect_HealthDiceLabel.AutoSize = true;
-            this.MonsterSelect_HealthDiceLabel.Location = new System.Drawing.Point(135, 194);
+            this.MonsterSelect_HealthDiceLabel.Location = new System.Drawing.Point(12, 194);
             this.MonsterSelect_HealthDiceLabel.Name = "MonsterSelect_HealthDiceLabel";
             this.MonsterSelect_HealthDiceLabel.Size = new System.Drawing.Size(63, 13);
             this.MonsterSelect_HealthDiceLabel.TabIndex = 7;
@@ -104,7 +104,7 @@
             // 
             // MonsterSelect_BABText
             // 
-            this.MonsterSelect_BABText.Location = new System.Drawing.Point(230, 47);
+            this.MonsterSelect_BABText.Location = new System.Drawing.Point(135, 44);
             this.MonsterSelect_BABText.Name = "MonsterSelect_BABText";
             this.MonsterSelect_BABText.ReadOnly = true;
             this.MonsterSelect_BABText.Size = new System.Drawing.Size(100, 20);
@@ -112,7 +112,7 @@
             // 
             // MonsterSelect_InitModText
             // 
-            this.MonsterSelect_InitModText.Location = new System.Drawing.Point(230, 86);
+            this.MonsterSelect_InitModText.Location = new System.Drawing.Point(135, 83);
             this.MonsterSelect_InitModText.Name = "MonsterSelect_InitModText";
             this.MonsterSelect_InitModText.ReadOnly = true;
             this.MonsterSelect_InitModText.Size = new System.Drawing.Size(100, 20);
@@ -120,7 +120,7 @@
             // 
             // MonsterSelect_DamageDiceText
             // 
-            this.MonsterSelect_DamageDiceText.Location = new System.Drawing.Point(230, 117);
+            this.MonsterSelect_DamageDiceText.Location = new System.Drawing.Point(135, 114);
             this.MonsterSelect_DamageDiceText.Name = "MonsterSelect_DamageDiceText";
             this.MonsterSelect_DamageDiceText.ReadOnly = true;
             this.MonsterSelect_DamageDiceText.Size = new System.Drawing.Size(100, 20);
@@ -128,7 +128,7 @@
             // 
             // MonsterSelect_NumHDText
             // 
-            this.MonsterSelect_NumHDText.Location = new System.Drawing.Point(230, 154);
+            this.MonsterSelect_NumHDText.Location = new System.Drawing.Point(135, 151);
             this.MonsterSelect_NumHDText.Name = "MonsterSelect_NumHDText";
             this.MonsterSelect_NumHDText.ReadOnly = true;
             this.MonsterSelect_NumHDText.Size = new System.Drawing.Size(100, 20);
@@ -136,7 +136,7 @@
             // 
             // MonsterSelect_HealthDiceText
             // 
-            this.MonsterSelect_HealthDiceText.Location = new System.Drawing.Point(230, 194);
+            this.MonsterSelect_HealthDiceText.Location = new System.Drawing.Point(135, 191);
             this.MonsterSelect_HealthDiceText.Name = "MonsterSelect_HealthDiceText";
             this.MonsterSelect_HealthDiceText.ReadOnly = true;
             this.MonsterSelect_HealthDiceText.Size = new System.Drawing.Size(100, 20);
@@ -145,7 +145,7 @@
             // MonsterSelect_Name
             // 
             this.MonsterSelect_Name.AutoSize = true;
-            this.MonsterSelect_Name.Location = new System.Drawing.Point(135, 12);
+            this.MonsterSelect_Name.Location = new System.Drawing.Point(12, 15);
             this.MonsterSelect_Name.Name = "MonsterSelect_Name";
             this.MonsterSelect_Name.Size = new System.Drawing.Size(76, 13);
             this.MonsterSelect_Name.TabIndex = 13;
@@ -153,7 +153,7 @@
             // 
             // MonsterSelect_NameText
             // 
-            this.MonsterSelect_NameText.Location = new System.Drawing.Point(230, 12);
+            this.MonsterSelect_NameText.Location = new System.Drawing.Point(135, 12);
             this.MonsterSelect_NameText.Name = "MonsterSelect_NameText";
             this.MonsterSelect_NameText.ReadOnly = true;
             this.MonsterSelect_NameText.Size = new System.Drawing.Size(100, 20);
@@ -161,9 +161,9 @@
             // 
             // MonsterSelect_Edit
             // 
-            this.MonsterSelect_Edit.Location = new System.Drawing.Point(25, 25);
+            this.MonsterSelect_Edit.Location = new System.Drawing.Point(15, 229);
             this.MonsterSelect_Edit.Name = "MonsterSelect_Edit";
-            this.MonsterSelect_Edit.Size = new System.Drawing.Size(75, 23);
+            this.MonsterSelect_Edit.Size = new System.Drawing.Size(117, 23);
             this.MonsterSelect_Edit.TabIndex = 15;
             this.MonsterSelect_Edit.Text = "Edit Monster";
             this.MonsterSelect_Edit.UseVisualStyleBackColor = true;
@@ -171,7 +171,7 @@
             // 
             // MonsterSelect_PictureBox
             // 
-            this.MonsterSelect_PictureBox.Location = new System.Drawing.Point(340, 40);
+            this.MonsterSelect_PictureBox.Location = new System.Drawing.Point(255, 33);
             this.MonsterSelect_PictureBox.Name = "MonsterSelect_PictureBox";
             this.MonsterSelect_PictureBox.Size = new System.Drawing.Size(161, 174);
             this.MonsterSelect_PictureBox.TabIndex = 16;
@@ -181,7 +181,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 274);
+            this.ClientSize = new System.Drawing.Size(430, 287);
             this.Controls.Add(this.MonsterSelect_PictureBox);
             this.Controls.Add(this.MonsterSelect_Edit);
             this.Controls.Add(this.MonsterSelect_NameText);
