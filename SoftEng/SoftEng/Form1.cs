@@ -67,6 +67,7 @@ namespace SoftEng
             List<MonsterAttributes> attributes = sqlConnection.getMonsterAttributes(monsterName);
 
             NameText.Text = attributes[0].monsterName.ToString();
+            Monsters.Text = attributes[0].monsterName.ToString(); // change window  title //
             BABText.Text = attributes[0].BAB.ToString();
             InitModText.Text = attributes[0].InitMod.ToString();
             DamageDiceText.Text = attributes[0].DamageDice.ToString();
@@ -92,18 +93,6 @@ namespace SoftEng
             }
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            // Gets the monster's picture -- TEST CODE MJ 12.1.14 //
-            //MYSQLConn test = new MYSQLConn();
-            //List<MonsterAttributes> testList = test.getMonsterAttributes("Assassin Vine");
-            //foreach (MonsterAttributes testListItem in testList)
-            //{
-            //    pictureBox1.Image = testListItem.image;
-            //}
-            //pictureBox1.Image = System.Drawing.Image.FromFile("./IMG_1110.JPG");
-        }
-
         private void monsterList_Click(object sender, EventArgs e)
         {
             // Populate the 'preview' box with the picture, monster data, etc for the preview //
@@ -118,6 +107,56 @@ namespace SoftEng
             txtSize.Text = selectedMonster.monsterSize.ToString();
             txtType.Text = selectedMonster.monsterType.ToString();
             picPortait.ImageLocation = sql.getMonsterImage(selectedMonster.monsterName.ToString());
+        }
+
+        private int rollDice(int numDice, int diceNum)
+        {
+            int result = 0;
+
+            Random randy = new Random();
+            for (int i = 0; i < numDice; i++)
+            {
+                int mod = (randy.Next() % diceNum) +1;
+                result += mod;
+            }
+
+            return result;
+        }
+
+        private void btnD4_Click(object sender, EventArgs e)
+        {
+            int result = rollDice(Convert.ToInt32(txtNumd4.Text), 4);
+            txtD4Result.Text = result.ToString();
+        }
+
+        private void btnD6_Click(object sender, EventArgs e)
+        {
+            int result = rollDice(Convert.ToInt32(txtNumd6.Text), 6);
+            txtD6Result.Text = result.ToString();
+        }
+
+        private void btnD8_Click(object sender, EventArgs e)
+        {
+            int result = rollDice(Convert.ToInt32(txtNumd8.Text), 8);
+            txtD8Result.Text = result.ToString();
+        }
+
+        private void btnD20_Click(object sender, EventArgs e)
+        {
+            int result = rollDice(Convert.ToInt32(txtNumd20.Text), 20);
+            txtD20Result.Text = result.ToString();
+        }
+
+        private void btnD100_Click(object sender, EventArgs e)
+        {
+            int result = rollDice(Convert.ToInt32(txtNumd100.Text), 100);
+            txtD100Result.Text = result.ToString();
+        }
+
+        private void btnDUser_Click(object sender, EventArgs e)
+        {
+            int result = rollDice(Convert.ToInt32(txtNumdUser.Text), Convert.ToInt32(txtDUserNum.Text));
+            txtDUserResult.Text = result.ToString();
         }
     }
 }
