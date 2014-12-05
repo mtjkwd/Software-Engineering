@@ -38,7 +38,7 @@ namespace SoftEng
         public string DamageDice;
         public int NumHD;
         public string HealthDice;
-        // put the picture here somehow...
+        public string pictureLoc;
     }
     class MYSQLConn
     {
@@ -129,9 +129,7 @@ namespace SoftEng
                 temp.DamageDice = sqlReader.GetString("DamageDice");
                 temp.NumHD = sqlReader.GetInt32("NumHD");
                 temp.HealthDice = sqlReader.GetString("HealthDice");
-                
-                // Test code for pictures //
-                
+                temp.pictureLoc = ("./EncounterImages/" + sqlReader.GetString("Picture"));
 
                 attributes.Add(temp);
             }
@@ -155,6 +153,7 @@ namespace SoftEng
                 temp.DamageDice = sqlReader.GetString("DamageDice");
                 temp.NumHD = sqlReader.GetInt32("NumHD");
                 temp.HealthDice = sqlReader.GetString("HealthDice");
+                temp.pictureLoc = ("./EncounterImages/" + sqlReader.GetString("Picture"));
 
                 attributes.Add(temp);
             }

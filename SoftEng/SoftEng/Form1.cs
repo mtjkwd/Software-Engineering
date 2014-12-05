@@ -52,6 +52,7 @@ namespace SoftEng
             Control[] DamageDice = Monsters.Controls.Find("MonsterSelect_DamageDiceText", true);
             Control[] NumHD = Monsters.Controls.Find("MonsterSelect_NumHDText", true);
             Control[] HealthDice = Monsters.Controls.Find("MonsterSelect_HealthDiceText", true);
+            Control[] pictureBox = Monsters.Controls.Find("MonsterSelect_PictureBox", true);
 
             TextBox NameText = (TextBox)Name[0];
             TextBox BABText = (TextBox)BAB[0];
@@ -59,6 +60,7 @@ namespace SoftEng
             TextBox DamageDiceText = (TextBox)DamageDice[0];
             TextBox NumHDText = (TextBox)NumHD[0];
             TextBox HealthDiceText = (TextBox)HealthDice[0];
+            PictureBox pictureBoxItem = (PictureBox)pictureBox[0];
 
             //Get the info for each monster and load it into a new popup
             MYSQLConn sqlConnection = new MYSQLConn();
@@ -70,6 +72,7 @@ namespace SoftEng
             DamageDiceText.Text = attributes[0].DamageDice.ToString();
             NumHDText.Text = attributes[0].NumHD.ToString();
             HealthDiceText.Text = attributes[0].HealthDice.ToString();
+            pictureBoxItem.ImageLocation = attributes[0].pictureLoc.ToString();
 
             Monsters.Show();
         }
