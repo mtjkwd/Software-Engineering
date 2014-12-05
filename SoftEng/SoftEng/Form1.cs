@@ -32,6 +32,17 @@ namespace SoftEng
             }
         }
 
+        private void Button_genMonster_Click(object sender, EventArgs e)
+        {
+            if (true)
+            {
+                MYSQLConn sql = new MYSQLConn();
+                List<MonsterAttributes> selectedMonsters = sql.getRandomMonsterAttributes();
+                MonsterAttributes selectedMonster = selectedMonsters[0];
+                makeNewDetailedWindow(selectedMonster.monsterName);
+            }
+        }
+
         private void makeNewDetailedWindow(string monsterName)
         {
             Form Monsters = new MonsterSelect();
@@ -72,7 +83,7 @@ namespace SoftEng
         {
             // Occurs when the user wants to close the form, but not done yet //
             // Show dialog asking the user if they are sure //
-            if (MessageBox.Show("Are you sure that you want to close?  All data will be lost.", "Close Application?", MessageBoxButtons.YesNo) == DialogResult.No)
+            if (MessageBox.Show("Are you sure that you want to close the monster generator?", "Close Application?", MessageBoxButtons.YesNo) == DialogResult.No)
             {
                 e.Cancel = true;
             }
@@ -90,11 +101,6 @@ namespace SoftEng
             //pictureBox1.Image = System.Drawing.Image.FromFile("./IMG_1110.JPG");
         }
 
-        private void Button_genMonster_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void monsterList_Click(object sender, EventArgs e)
         {
             // Populate the 'preview' box with the picture, monster data, etc for the preview //
@@ -110,7 +116,5 @@ namespace SoftEng
             txtType.Text = selectedMonster.monsterType.ToString();
             picPortait.ImageLocation = sql.getMonsterImage(selectedMonster.monsterName.ToString());
         }
-
-        
     }
 }

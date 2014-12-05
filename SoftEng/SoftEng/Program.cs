@@ -139,6 +139,29 @@ namespace SoftEng
             return attributes;
         }
 
+        public List<MonsterAttributes> getRandomMonsterAttributes()
+        {
+            List<MonsterAttributes> attributes = new List<MonsterAttributes>();
+            string cmdText = "SELECT * FROM Software_Engineering.MonsterAttr " +
+            "ORDER BY RAND() LIMIT 1";
+            MySqlCommand cmd = new MySqlCommand(cmdText, sqlConn);
+            sqlReader = cmd.ExecuteReader(); // executes the reader
+            while (sqlReader.Read())
+            {
+                MonsterAttributes temp;
+                temp.monsterName = sqlReader.GetString("Name");
+                temp.BAB = sqlReader.GetString("BAB");
+                temp.InitMod = sqlReader.GetInt32("InitMod").ToString();
+                temp.DamageDice = sqlReader.GetString("DamageDice");
+                temp.NumHD = sqlReader.GetInt32("NumHD");
+                temp.HealthDice = sqlReader.GetString("HealthDice");
+
+                attributes.Add(temp);
+            }
+            sqlReader.Close();
+            return attributes;
+        }
+
         public int getNumMonsters()
         {
             int result = 0;
