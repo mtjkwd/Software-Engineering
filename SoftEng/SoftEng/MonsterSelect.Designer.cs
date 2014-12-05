@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.MonsterSelect_Cancel = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.MonsterSelect_BABLabel = new System.Windows.Forms.Label();
             this.MonsterSelect_InitModLabel = new System.Windows.Forms.Label();
             this.MonsterSelect_DamageDiceLabel = new System.Windows.Forms.Label();
@@ -43,6 +42,8 @@
             this.MonsterSelect_Name = new System.Windows.Forms.Label();
             this.MonsterSelect_NameText = new System.Windows.Forms.TextBox();
             this.MonsterSelect_Edit = new System.Windows.Forms.Button();
+            this.MonsterSelect_PictureBox = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.MonsterSelect_PictureBox)).BeginInit();
             this.SuspendLayout();
             // 
             // MonsterSelect_Cancel
@@ -54,15 +55,6 @@
             this.MonsterSelect_Cancel.Text = "Cancel";
             this.MonsterSelect_Cancel.UseVisualStyleBackColor = true;
             this.MonsterSelect_Cancel.Click += new System.EventHandler(this.MonsterSelect_Cancel_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(371, 135);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Picture Goes here";
             // 
             // MonsterSelect_BABLabel
             // 
@@ -177,11 +169,20 @@
             this.MonsterSelect_Edit.UseVisualStyleBackColor = true;
             this.MonsterSelect_Edit.Click += new System.EventHandler(this.MonsterSelect_Edit_Click);
             // 
+            // MonsterSelect_PictureBox
+            // 
+            this.MonsterSelect_PictureBox.Location = new System.Drawing.Point(340, 40);
+            this.MonsterSelect_PictureBox.Name = "MonsterSelect_PictureBox";
+            this.MonsterSelect_PictureBox.Size = new System.Drawing.Size(161, 174);
+            this.MonsterSelect_PictureBox.TabIndex = 16;
+            this.MonsterSelect_PictureBox.TabStop = false;
+            // 
             // MonsterSelect
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(513, 274);
+            this.Controls.Add(this.MonsterSelect_PictureBox);
             this.Controls.Add(this.MonsterSelect_Edit);
             this.Controls.Add(this.MonsterSelect_NameText);
             this.Controls.Add(this.MonsterSelect_Name);
@@ -195,11 +196,11 @@
             this.Controls.Add(this.MonsterSelect_DamageDiceLabel);
             this.Controls.Add(this.MonsterSelect_InitModLabel);
             this.Controls.Add(this.MonsterSelect_BABLabel);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.MonsterSelect_Cancel);
             this.Name = "MonsterSelect";
             this.Text = "MonsterSelect";
             this.TopMost = true;
+            ((System.ComponentModel.ISupportInitialize)(this.MonsterSelect_PictureBox)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,7 +209,6 @@
         #endregion
 
         private System.Windows.Forms.Button MonsterSelect_Cancel;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label MonsterSelect_BABLabel;
         private System.Windows.Forms.Label MonsterSelect_InitModLabel;
         private System.Windows.Forms.Label MonsterSelect_DamageDiceLabel;
@@ -222,6 +222,7 @@
         private System.Windows.Forms.Label MonsterSelect_Name;
         private System.Windows.Forms.TextBox MonsterSelect_NameText;
         private System.Windows.Forms.Button MonsterSelect_Edit;
+        private System.Windows.Forms.PictureBox MonsterSelect_PictureBox;
 
     }
 }
