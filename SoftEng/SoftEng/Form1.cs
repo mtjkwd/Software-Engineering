@@ -108,6 +108,7 @@ namespace SoftEng
             txtHealth.Text = selectedMonster.monsterHealth.ToString();
             txtSize.Text = selectedMonster.monsterSize.ToString();
             txtType.Text = selectedMonster.monsterType.ToString();
+            picPortait.ImageLocation = sql.getMonsterImage(selectedMonster.monsterName.ToString());
         }
 
         

@@ -97,6 +97,22 @@ namespace SoftEng
             return monster;
         }
 
+        public string getMonsterImage(string monsterName)
+        {
+            // Function for getting the picture name / location data from the MonsterAttr table //
+            string cmdText = "SELECT Picture FROM Software_Engineering.MonsterAttr "
+                + "WHERE Name = '" + monsterName.ToString() + "'";
+            MySqlCommand cmd = new MySqlCommand(cmdText, sqlConn);
+            sqlReader = cmd.ExecuteReader(); // executes the reader
+            string monsterImage = string.Empty;
+            while (sqlReader.Read())
+            {
+                monsterImage = sqlReader.GetString("Picture");
+            }
+            sqlReader.Close();
+            return ("./EncounterImages/" + monsterImage.ToString());
+        }
+
         public List<MonsterAttributes> getMonsterAttributes(string monsterName)
         {
             List<MonsterAttributes> attributes = new List<MonsterAttributes>();
