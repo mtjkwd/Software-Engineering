@@ -125,38 +125,80 @@ namespace SoftEng
 
         private void btnD4_Click(object sender, EventArgs e)
         {
-            int result = rollDice(Convert.ToInt32(txtNumd4.Text), 4);
-            txtD4Result.Text = result.ToString();
+            try
+            {
+                int result = rollDice(Convert.ToInt32(txtNumd4.Text), 4);
+                txtD4Result.Text = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please enter a number of dice to roll!");
+            }
         }
 
         private void btnD6_Click(object sender, EventArgs e)
         {
-            int result = rollDice(Convert.ToInt32(txtNumd6.Text), 6);
-            txtD6Result.Text = result.ToString();
+            try
+            {
+                int result = rollDice(Convert.ToInt32(txtNumd6.Text), 6);
+                txtD6Result.Text = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please enter a number of dice to roll!");
+            }
         }
 
         private void btnD8_Click(object sender, EventArgs e)
         {
-            int result = rollDice(Convert.ToInt32(txtNumd8.Text), 8);
-            txtD8Result.Text = result.ToString();
+            try
+            {
+                int result = rollDice(Convert.ToInt32(txtNumd8.Text), 8);
+                txtD8Result.Text = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please enter a number of dice to roll!");
+            }
         }
 
         private void btnD20_Click(object sender, EventArgs e)
         {
-            int result = rollDice(Convert.ToInt32(txtNumd20.Text), 20);
-            txtD20Result.Text = result.ToString();
+            try
+            {
+                int result = rollDice(Convert.ToInt32(txtNumd20.Text), 20);
+                txtD20Result.Text = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please enter a number of dice to roll!");
+            }
         }
 
         private void btnD100_Click(object sender, EventArgs e)
         {
-            int result = rollDice(Convert.ToInt32(txtNumd100.Text), 100);
-            txtD100Result.Text = result.ToString();
+            try
+            {
+                int result = rollDice(Convert.ToInt32(txtNumd100.Text), 100);
+                txtD100Result.Text = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please enter a number of dice to roll!");
+            }
         }
 
         private void btnDUser_Click(object sender, EventArgs e)
         {
-            int result = rollDice(Convert.ToInt32(txtNumdUser.Text), Convert.ToInt32(txtDUserNum.Text));
-            txtDUserResult.Text = result.ToString();
+            try
+            {
+                int result = rollDice(Convert.ToInt32(txtNumdUser.Text), Convert.ToInt32(txtDUserNum.Text));
+                txtDUserResult.Text = result.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please enter a number of dice to roll!");
+            }
         }
     }
 }

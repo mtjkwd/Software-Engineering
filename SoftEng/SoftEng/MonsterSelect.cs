@@ -43,9 +43,9 @@ namespace SoftEng
                 MonsterSelect_DamageDiceText.ReadOnly = false;
                 MonsterSelect_NumHDText.ReadOnly = false;
                 MonsterSelect_HealthDiceText.ReadOnly = false;
-                MonsterSelect_Edit.Text = "Save Monster";
+                MonsterSelect_Edit.Text = "Save Changes";
             }
-            else if (MonsterSelect_Edit.Text == "Save Monster")
+            else if (MonsterSelect_Edit.Text == "Save Changes")
             {
                 MonsterSelect_NameText.ReadOnly = true;
                 MonsterSelect_BABText.ReadOnly = true;

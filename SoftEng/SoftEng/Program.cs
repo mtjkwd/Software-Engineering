@@ -161,6 +161,124 @@ namespace SoftEng
             return attributes;
         }
 
+        public List<MonsterAttributes> getConditionalMonsterAttributes(string cr, string partyPop, string numMonsters, string type, string size)
+        {
+            List<MonsterAttributes> attributes = new List<MonsterAttributes>();
+
+            string cmdText = "SELECT * FROM Software_Engineering.Monster ";
+            bool somethingCameBefore = false;
+            float crWanted = 0;
+
+            try
+            {
+                if (cr != "")
+                {
+                    crWanted = Convert.ToInt32(cr);
+                    cmdText += "WHERE (ChallengeRating BETWEEN " + (Convert.ToInt32(cr) - 1) + " AND " + (Convert.ToInt32(cr) + 1) + ") " ;
+                    somethingCameBefore = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please enter an integer for the CR of the monster(s) you wish to generate!");
+            }
+
+            try
+            {
+                if (partyPop != "")
+                {
+                    if (somethingCameBefore)
+                    {
+                        cmdText += "AND ";
+                    }
+                    if (crWanted == 0)
+                    {
+                        float adjustedCr = 20 * (Convert.ToInt32(partyPop) / 4);
+                        cmdText += "WHERE (ChallengeRating BETWEEN " + (adjustedCr - 1) + " AND " + (adjustedCr + 1) + ") ";
+                        somethingCameBefore = true;
+                    }
+                    else
+                    {
+                        float adjustedCr = crWanted * (Convert.ToInt32(partyPop) / 4);
+                        cmdText += "WHERE (ChallengeRating BETWEEN " + (adjustedCr - 1) + " AND " + (adjustedCr + 1) + ") ";
+                        somethingCameBefore = true;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please enter an integer for the number of party members you wish to generate monsters for!");
+            }
+
+            try
+            {
+                if (type != "")
+                {
+                    if (somethingCameBefore)
+                    {
+                        cmdText += "AND ";
+                    }
+                    cmdText += "WHERE (Type=" + type + ") ";
+                    somethingCameBefore = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please enter a string for the type of the generated monster(s)!");
+            }
+
+            try
+            {
+                if (size != "")
+                {
+                    if (somethingCameBefore)
+                    {
+                        cmdText += "AND ";
+                    }
+                    cmdText += "WHERE (Size=" + size + ") ";
+                    somethingCameBefore = true;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please enter a character for the size of the generated monster(s)!");
+            }
+
+            try
+            {
+                int numWanted = 1;
+                if (numMonsters != "")
+                {
+                    numWanted = Convert.ToInt32(numMonsters);
+                }
+                cmdText += "ORDER BY RAND() LIMIT " + numWanted + ";";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Please enter an integer for the desired number of generated monster(s)!");
+            }
+
+            //*******************************************************************MORE CODE GOES HERE
+
+            MySqlCommand cmd = new MySqlCommand(cmdText, sqlConn);
+            sqlReader = cmd.ExecuteReader(); // executes the reader
+            while (sqlReader.Read())
+            {
+                MonsterAttributes temp;
+                temp.monsterName = sqlReader.GetString("Name");
+                temp.BAB = sqlReader.GetString("BAB");
+                temp.InitMod = sqlReader.GetInt32("InitMod").ToString();
+                temp.DamageDice = sqlReader.GetString("DamageDice");
+                temp.NumHD = sqlReader.GetInt32("NumHD");
+                temp.HealthDice = sqlReader.GetString("HealthDice");
+                temp.pictureLoc = ("./EncounterImages/" + sqlReader.GetString("Picture"));
+
+                attributes.Add(temp);
+            }
+            sqlReader.Close();
+            return attributes;
+        }
+
         public int getNumMonsters()
         {
             int result = 0;
