@@ -34,12 +34,29 @@ namespace SoftEng
 
         private void Button_genMonster_Click(object sender, EventArgs e)
         {
-            if (true)
+            MYSQLConn sql = new MYSQLConn();
+            List<MonsterAttributes> theMonsters = sql.getConditionalMonsterAttributes(txtAverageCR.Text, txtPartyPopulation.Text, txtDesiredNumMonsters.Text, txtDesiredType.Text, txtDesiredSize.Text);
+            if (theMonsters.Count == 0)
             {
-                MYSQLConn sql = new MYSQLConn();
-                List<MonsterAttributes> selectedMonsters = sql.getRandomMonsterAttributes();
-                MonsterAttributes selectedMonster = selectedMonsters[0];
-                makeNewDetailedWindow(selectedMonster.monsterName);
+                MessageBox.Show("Your generation parameters provided no results. Please revise your search parameters and try again!");
+            }
+            else
+            {
+                int counter = 0;
+                Random randlekins = new Random();
+                if (txtDesiredNumMonsters.Text != "")
+                {
+                    while (counter < Convert.ToInt32(txtDesiredNumMonsters.Text))
+                    {
+                        int nextOne = randlekins.Next() % theMonsters.Count;
+                        makeNewDetailedWindow(theMonsters[nextOne].monsterName);
+                        counter++;
+                    }
+                }
+                else
+                {
+                    makeNewDetailedWindow(theMonsters[0].monsterName);
+                }
             }
         }
 
